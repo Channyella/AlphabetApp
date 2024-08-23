@@ -1,0 +1,3 @@
+const [fontsLoaded, error] = useFonts({
+    "Roboto-Mono": require("../assets/fonts/RobotoMono-Regular.ttf"),
+});
