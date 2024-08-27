@@ -5,68 +5,66 @@ import bear from "@/assets/AlphabetAppPics/Bear.jpeg";
 import cow from "@/assets/AlphabetAppPics/Cow.jpeg";
 
 import dog from "@/assets/AlphabetAppPics/Dog.jpeg";
-import duck from "@/assets/AlphabetAppPics/duck.jpeg";
+import duck from "@/assets/AlphabetAppPics/Duck.jpeg";
 
-import elephant from "@/assets/AlphabetAppPics/elephant.jpeg";
+import elephant from "@/assets/AlphabetAppPics/Elephant.jpeg";
 
-import fox from "@/assets/AlphabetAppPics/fox.jpeg";
-import frog from "@/assets/AlphabetAppPics/frog.jpeg";
+import frog from "@/assets/AlphabetAppPics/Frog.jpeg";
 
-import giraffe from "@/assets/AlphabetAppPics/giraffe.jpeg";
+import giraffe from "@/assets/AlphabetAppPics/Giraffe.jpeg";
 
-import horse from "@/assets/AlphabetAppPics/horse.jpeg";
+import horse from "@/assets/AlphabetAppPics/Horse.jpeg";
 
-import ibis from "@/assets/AlphabetAppPics/ibis.jpeg";
+import ibis from "@/assets/AlphabetAppPics/Ibis.jpeg";
 
-import jaguar from "@/assets/AlphabetAppPics/jaguar.jpeg";
-import jellyfish from "@/assets/AlphabetAppPics/jellyfish.jpeg";
+import jaguar from "@/assets/AlphabetAppPics/Jaguar.jpeg";
+import jellyfish from "@/assets/AlphabetAppPics/Jellyfish.jpeg";
 
-import kangaroo from "@/assets/AlphabetAppPics/kangaroo.jpeg";
+import kangaroo from "@/assets/AlphabetAppPics/Kangaroo.jpeg";
 
-import lion from "@/assets/AlphabetAppPics/lion.jpeg";
+import lion from "@/assets/AlphabetAppPics/Lion.jpeg";
 
-import monkey from "@/assets/AlphabetAppPics/monkey.jpeg";
+import monkey from "@/assets/AlphabetAppPics/Monkey.jpeg";
 
-import narwhal from "@/assets/AlphabetAppPics/narwhal.jpeg";
+import narwhal from "@/assets/AlphabetAppPics/Narwhal.jpeg";
 
-import octopus from "@/assets/AlphabetAppPics/octopus.jpeg";
+import octopus from "@/assets/AlphabetAppPics/Octopus.jpeg";
 
-import penguin from "@/assets/AlphabetAppPics/penguin.jpeg";
+import penguin from "@/assets/AlphabetAppPics/Penguin.jpeg";
 
-import quail from "@/assets/AlphabetAppPics/quail.jpeg";
+import quail from "@/assets/AlphabetAppPics/Quail.jpeg";
 
-import raccoon from "@/assets/AlphabetAppPics/raccoon.jpeg";
-import raven from "@/assets/AlphabetAppPics/raven.jpeg";
+import raccoon from "@/assets/AlphabetAppPics/Raccoon.jpeg";
+import raven from "@/assets/AlphabetAppPics/Raven.jpeg";
 
-import snail from "@/assets/AlphabetAppPics/snail.jpeg";
+import snail from "@/assets/AlphabetAppPics/Snail.jpeg";
 
-import turtle from "@/assets/AlphabetAppPics/turtle.jpeg";
+import turtle from "@/assets/AlphabetAppPics/Turtle.jpeg";
 
-import unicorn from "@/assets/AlphabetAppPics/unicorn.jpeg";
+import unicorn from "@/assets/AlphabetAppPics/Unicorn.jpeg";
 
-import vulture from "@/assets/AlphabetAppPics/vulture.jpeg";
+import vulture from "@/assets/AlphabetAppPics/Vulture.jpeg";
 
-import wolf from "@/assets/AlphabetAppPics/wolf.jpeg";
+import wolf from "@/assets/AlphabetAppPics/Wolf.jpeg";
 
-import yak from "@/assets/AlphabetAppPics/yak.jpeg";
+import fox from "@/assets/AlphabetAppPics/Fox.jpeg";
 
-import zebra from "@/assets/AlphabetAppPics/zebra.jpeg";
+import yak from "@/assets/AlphabetAppPics/Yak.jpeg";
+
+import zebra from "@/assets/AlphabetAppPics/Zebra.jpeg";
 
 
-export default {
+export default [
     alligator,
     bear,
     cow,
-    dog,
     duck,
     elephant,
-    fox, 
     frog,
     giraffe,
     horse,
     ibis,
     jaguar,
-    jellyfish,
     kangaroo,
     lion,
     monkey,
@@ -75,13 +73,16 @@ export default {
     penguin,
     quail,
     raccoon,
-    raven,
     snail,
     turtle,
     unicorn,
     vulture,
     wolf,
+    fox, 
     yak,
     zebra,
-};
+    dog,
+    jellyfish,
+    raven,
+];
 

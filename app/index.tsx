@@ -1,8 +1,12 @@
-import { View, Text, ImageBackground, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, SafeAreaView} from 'react-native';
 import React from 'react';
 import MainPageImage from "@/assets/AlphabetAppPics/MainPage.jpeg";
+import { StatusBar } from 'expo-status-bar';
+import CustomButton from '@/components/CustomButton';
+import { useRouter } from 'expo-router';
 
 const App = () => {
+    const router = useRouter();
     return (
         <View className="flex-1">
             <ImageBackground 
@@ -11,17 +15,14 @@ const App = () => {
                 className="flex-1"
             >
                 <SafeAreaView className='flex-1 px-1 justify-end'>
-                    <View className='mb-60'>
-                        <TouchableOpacity
-                            className=' w-3/4 self-center bg-yellow-200 py-3 mt-4 rounded-lg'
-                            onPress={() => console.log('Button Pressed!')}
-                            >
-                                <Text className='text-center text-black text-lg font-bold'>
-                                    Press To Learn!
-                                </Text>
-                            
-                        </TouchableOpacity>
+                    <View className='mb-40'>
+                        <CustomButton 
+                            onPress={() => router.push("/alphabet/alphabetOptions")}
+                            title='Press to Learn!'
+                            containerStyles=' w-3/4 self-center'
+                        />
                     </View>
+                    <StatusBar style="dark" backgroundColor="#FEF08A"/>
                 </SafeAreaView>
             </ImageBackground>
         </View>
