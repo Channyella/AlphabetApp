@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Audio } from 'expo-av';
 
 import { ALPHABET_DATA, AlphabetType, AUDIO_FILES } from '@/constants/AlphabetData';
-import alphabetImages from '@/constants/models/alphabet-images';
+import { alphabetImageArray } from '@/constants/models/alphabet-images';
 import { Link, useRouter } from 'expo-router';
 import CustomButton from '@/components/CustomButton';
 
@@ -52,7 +52,7 @@ const AlphabetOptions: React.FC = () => {
                                     className= 'my-2 rounded-lg overflow-hidden'
                                     >
                                     <ImageBackground
-                                        source = {alphabetImages[item.id - 1]}
+                                        source = {alphabetImageArray[item.id - 1]}
                                         resizeMode='contain'
                                         className='flex-1 rounded-lg justify-center'>
                                             <Text className={`${item.textColor ?? 'text-black'} text-6xl font-bold text-center`}>

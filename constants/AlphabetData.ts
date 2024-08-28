@@ -1,6 +1,16 @@
+import { ImageSourcePropType } from "react-native";
+import { alphabetImagesObject } from "./models/alphabet-images";
+
+export interface animalName {
+    upperCase: string;
+    caps: string;
+    lowerCase: string;
+}
+
 export interface ImageInfo {
-    image: string,
+    image: ImageSourcePropType,
     audio: string;
+    title: animalName;
 }
 
 export interface AlphabetType {
@@ -20,8 +30,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'a',
         images: [
             {
-            image: 'Alligator.jpeg',
-            audio: 'Alligator.m4a'
+            image: alphabetImagesObject.alligator,
+            audio: 'Alligator.m4a',
+            title: {
+                upperCase:'Alligator',
+                caps: 'ALLIGATOR',
+                lowerCase: 'alligator'
+                },
             },
         ],
         audio: ['A_letter.m4a', 'A_other.m4a', 'A_short_sound.m4a']
@@ -32,8 +47,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'b',
         images: [
             {
-            image: 'Bear.jpeg',
-            audio: 'Bear.m4a'
+            image: alphabetImagesObject.bear,
+            audio: 'Bear.m4a',
+            title: {
+                upperCase:'Bear',
+                caps: 'BEAR',
+                lowerCase: 'bear'
+                },
             },
         ],
         audio: ['B_letter.m4a', 'B_sound.m4a'],
@@ -44,8 +64,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'c',
         images: [
             {
-                image: 'Cow.jpeg',
+                image: alphabetImagesObject.cow,
                 audio: 'Cow.m4a',
+            title: {
+                upperCase:'Cow',
+                caps: 'COW',
+                lowerCase: 'cow'
+                },
             }
         ],
         audio: ['C_letter.m4a', 'C_sound.m4a']
@@ -56,12 +81,22 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'd',
         images: [
             {
-                image: 'Duck.jpeg', 
+                image: alphabetImagesObject.duck, 
                 audio: 'Duck.m4a',
+                title: {
+                    upperCase:'Duck',
+                    caps: 'DUCK',
+                    lowerCase: 'duck'
+                    },
             },
             {
-                image: 'Dog.jpeg',
+                image: alphabetImagesObject.dog,
                 audio: 'Dog.m4a',
+                title: {
+                    upperCase:'Dog',
+                    caps: 'DOG',
+                    lowerCase: 'dog'
+                    },
             }
         ],
         audio: ['D_letter.m4a', 'D_sound.m4a']
@@ -72,8 +107,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'e',
         images: [
             {
-                image: 'Elephant.jpeg', 
+                image: alphabetImagesObject.elephant,
                 audio: 'Elephant.m4a',
+                title: {
+                    upperCase:'Elephant',
+                    caps: 'ELEPHANT',
+                    lowerCase: 'elephant'
+                    },
             }
         ],
         audio: ['E_letter.m4a', 'E_sound.m4a']
@@ -84,8 +124,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'f',
         images: [
             {
-                image: 'Frog.jpeg',
+                image: alphabetImagesObject.frog,
                 audio: 'Frog.m4a',
+                title: {
+                    upperCase:'Frog',
+                    caps: 'FROG',
+                    lowerCase: 'frog'
+                    },
             }
         ],
         audio: ['F_letter.m4a', 'F_sound.m4a']
@@ -96,8 +141,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'g',
         images: [
             {
-                image: 'Giraffe.jpeg',
+                image: alphabetImagesObject.giraffe,
                 audio: 'Giraffe.m4a',
+                title: {
+                    upperCase:'Giraffe',
+                    caps: 'GIRAFFE',
+                    lowerCase: 'giraffe'
+                    },
             }
         ],
         audio: ['G_letter.m4a', 'G_sound.m4a']
@@ -108,8 +158,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'h',
         images: [
             {
-                image: 'Horse.jpeg', 
+                image: alphabetImagesObject.horse,
                 audio: 'Horse.m4a',
+                title: {
+                    upperCase:'Horse',
+                    caps: 'HORSE',
+                    lowerCase: 'horse'
+                    },
             }
         ],
         audio: ['H_letter.m4a', 'H_sound.m4a'],
@@ -122,8 +177,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'i',
         images: [
             {
-                image: 'Ibis.jpeg', 
+                image: alphabetImagesObject.ibis,
                 audio: 'Ibis.m4a',
+                title: {
+                    upperCase:'Ibis',
+                    caps: 'IBIS',
+                    lowerCase: 'ibis'
+                    },
             }
         ],
         audio: ['I_letter.m4a', 'I_short_sound.m4a']
@@ -134,12 +194,22 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'j',
         images: [
             {
-                image: 'Jaguar.jpeg', 
+                image: alphabetImagesObject.jaguar,
                 audio: 'Jaguar.m4a',
+                title: {
+                    upperCase:'Jaguar',
+                    caps: 'JAGUAR',
+                    lowerCase: 'jaguar'
+                    },
             },
             {
-                image: 'Jellyfish.jpeg',
+                image: alphabetImagesObject.jellyfish,
                 audio: 'Jellyfish.m4a',
+                title: {
+                    upperCase:'Jellyfish',
+                    caps: 'JELLYFISH',
+                    lowerCase: 'jellyfish'
+                    },
             }
         ],
         audio: ['J_letter.m4a', 'J_sound.m4a']
@@ -150,8 +220,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'k',
         images: [
             {
-                image: 'Kangaroo.jpeg', 
+                image: alphabetImagesObject.kangaroo,
                 audio: 'Kangaroo.m4a',
+                title: {
+                    upperCase:'Kangaroo',
+                    caps: 'KANGAROO',
+                    lowerCase: 'kangaroo'
+                    },
             }
         ],
         audio: ['K_letter.m4a', 'K_sound.m4a']
@@ -162,8 +237,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'l',
         images: [
             {
-                image: 'Lion.jpeg', 
+                image: alphabetImagesObject.lion,
                 audio: 'Lion.m4a',
+                title: {
+                    upperCase:'Lion',
+                    caps: 'LION',
+                    lowerCase: 'lion'
+                    },
             }
         ],
         audio: ['L_letter.m4a', 'L_sound.m4a']
@@ -174,8 +254,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'm',
         images: [
             {
-                image: 'Monkey.jpeg', 
+                image: alphabetImagesObject.monkey,
                 audio: 'Monkey.m4a',
+                title: {
+                    upperCase:'Monkey',
+                    caps: 'MONKEY',
+                    lowerCase: 'monkey'
+                    },
             }
         ],
         audio: ['M_letter.m4a', 'M_sound.m4a'],
@@ -188,8 +273,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'n',
         images: [
             {
-                image: 'Narwhal.jpeg', 
+                image: alphabetImagesObject.narwhal,
                 audio: 'Narwhal.m4a',
+                title: {
+                    upperCase:'Narwhal',
+                    caps: 'NARWHAL',
+                    lowerCase: 'narwhal'
+                    },
             }
         ],
         audio: ['N_letter.m4a', 'N_sound.m4a']
@@ -200,8 +290,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'o',
         images: [
             {
-                image: 'Octopus.jpeg', 
+                image: alphabetImagesObject.octopus,
                 audio: 'Octopus.m4a',
+                title: {
+                    upperCase:'Octopus',
+                    caps: 'OCTOPUS',
+                    lowerCase: 'octopus'
+                    },
             }
         ],
         audio: ['O_letter.m4a', 'O_short_sound.m4a', 'O_dotted_sound']
@@ -212,8 +307,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'p',
         images: [
             {
-                image: 'Penguin.jpeg',
+                image: alphabetImagesObject.penguin,
                 audio: 'Penguin.m4a',
+                title: {
+                    upperCase:'Penguin',
+                    caps: 'PENGUIN',
+                    lowerCase: 'penguin'
+                    },
             }
         ],
         audio: ['P_letter.m4a', 'P_sound.m4a'],
@@ -226,8 +326,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'q',
         images: [
             {
-                image: 'Quail.jpeg', 
+                image: alphabetImagesObject.quail,
                 audio: 'Quail.m4a',
+                title: {
+                    upperCase:'Quail',
+                    caps: 'QUAIL',
+                    lowerCase: 'quail'
+                    },
             }
         ],
         audio: ['Q_letter.m4a', 'Q_sound.m4a']
@@ -238,12 +343,22 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'r',
         images: [
             {
-                image: 'Raccoon.jpeg', 
+                image: alphabetImagesObject.raccoon,
                 audio: 'Raccoon.m4a',
+                title: {
+                    upperCase:'Raccoon',
+                    caps: 'RACCOON',
+                    lowerCase: 'raccoon'
+                    },
             },
             {
-                image: 'Raven.jpeg',
+                image: alphabetImagesObject.raven,
                 audio: 'Raven.jpeg',
+                title: {
+                    upperCase:'Raven',
+                    caps: 'RAVEN',
+                    lowerCase: 'raven'
+                    },
             }
         ],
         audio: ['R_letter.m4a', 'R_sound.m4a'],
@@ -256,8 +371,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 's',
         images: [
             {
-                image: 'Snail.jpeg', 
+                image: alphabetImagesObject.snail,
                 audio: 'Snail.m4a',
+                title: {
+                    upperCase:'Snail',
+                    caps: 'SNAIL',
+                    lowerCase: 'snail'
+                    },
             }
         ],
         audio: ['S_letter.m4a', 'S_sound.m4a']
@@ -268,8 +388,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 't',
         images: [
             {
-                image: 'Turtle.jpeg', 
+                image: alphabetImagesObject.turtle,
                 audio: 'Turtle.m4a',
+                title: {
+                    upperCase:'Turtle',
+                    caps: 'TURTLE',
+                    lowerCase: 'turtle'
+                    },
             }
         ],
         audio: ['T_letter.m4a', 'T_sound.m4a']
@@ -280,8 +405,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'u',
         images: [
             {
-                image: 'Unicorn.jpeg', 
+                image: alphabetImagesObject.unicorn,
                 audio: 'Unicorn.m4a',
+                title: {
+                    upperCase:'Unicorn',
+                    caps: 'UNICORN',
+                    lowerCase: 'unicorn'
+                    },
             }
         ],
         audio: ['U_letter.m4a', 'U_sound.m4a', 'U_dotted.m4a']
@@ -292,8 +422,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'v',
         images: [
             {
-                image: 'Vulture.jpeg', 
+                image: alphabetImagesObject.vulture,
                 audio: 'Vulture.m4a',
+                title: {
+                    upperCase:'Vulture',
+                    caps: 'VULTURE',
+                    lowerCase: 'vulture'
+                    },
             }
         ],
         audio: ['V_letter.m4a', 'V_sound.m4a'],
@@ -305,8 +440,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'w',
         images: [
             {
-                image: 'Wolf.jpeg', 
+                image: alphabetImagesObject.wolf,
                 audio: 'Wolf.m4a',
+                title: {
+                    upperCase:'Wolf',
+                    caps: 'WOLF',
+                    lowerCase: 'wolf'
+                    },
             }
         ],
         audio: ['W_letter.m4a', 'W_sound.m4a'],
@@ -319,8 +459,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'x',
         images: [
             {
-                image: 'Fox.jpeg', 
+                image: alphabetImagesObject.fox,
                 audio: 'Fox.m4a',
+                title: {
+                    upperCase:'Fox',
+                    caps: 'FOX',
+                    lowerCase: 'fox'
+                    },
             }
         ],
         audio: ['X_letter.m4a', 'X_sound.m4a']
@@ -331,8 +476,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'y',
         images: [
             {
-                image: 'Yak.jpeg', 
+                image: alphabetImagesObject.yak,
                 audio: 'Yak.m4a',
+                title: {
+                    upperCase:'Yak',
+                    caps: 'YAK',
+                    lowerCase: 'yak'
+                    },
             }
         ],
         audio: ['Y_letter.m4a', 'Y_sound.m4a'],
@@ -345,8 +495,13 @@ export const ALPHABET_DATA: AlphabetType[] = [
         lower: 'z',
         images: [
             {
-                image: 'Zebra.jpeg', 
+                image: alphabetImagesObject.zebra,
                 audio: 'Zebra.m4a',
+                title: {
+                    upperCase:'Zebra',
+                    caps: 'ZEBRA',
+                    lowerCase: 'zebra'
+                    },
             }
         ],
         audio: ['Z_letter.m4a', 'Z_sound.m4a'],

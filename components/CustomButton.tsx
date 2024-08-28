@@ -3,7 +3,7 @@ import React from 'react'
 
 interface CustomButtonProps {
     onPress: () => void;
-    title: string;
+    title?: string;
     textStyles?: string;
     containerStyles?: string;
 }
@@ -17,7 +17,7 @@ const CustomButton = ({
     return (
         <TouchableOpacity 
         activeOpacity={0.7}
-        className={`bg-yellow-200 rounded-xl min-h-[62px] justify-center items-center ${containerStyles}`}
+        className={`bg-yellow-200 rounded-xl min-h-[62px] justify-center items-center p-3 m-3 ${containerStyles}`}
         onPress = {onPress}>
             <Text className={`font-semibold text-lg ${textStyles}`}>
                 {title}

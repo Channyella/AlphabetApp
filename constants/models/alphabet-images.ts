@@ -54,7 +54,7 @@ import yak from "@/assets/AlphabetAppPics/Yak.jpeg";
 import zebra from "@/assets/AlphabetAppPics/Zebra.jpeg";
 
 
-export default [
+const alphabetImageArray = [
     alligator,
     bear,
     cow,
@@ -86,3 +86,36 @@ export default [
     raven,
 ];
 
+const alphabetImagesObject = {
+    alligator,
+    bear,
+    cow,
+    dog,
+    duck,
+    elephant,
+    frog,
+    giraffe,
+    horse,
+    ibis,
+    jaguar,
+    jellyfish,
+    kangaroo,
+    lion,
+    monkey,
+    narwhal,
+    octopus,
+    penguin,
+    quail,
+    raccoon,
+    raven,
+    snail,
+    turtle,
+    unicorn,
+    vulture,
+    wolf,
+    fox,
+    yak,
+    zebra,
+};
+
+export {alphabetImageArray, alphabetImagesObject}
