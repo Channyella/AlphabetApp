@@ -353,7 +353,7 @@ export const ALPHABET_DATA: AlphabetType[] = [
             },
             {
                 image: alphabetImagesObject.raven,
-                audio: 'Raven.jpeg',
+                audio: 'Raven.m4a',
                 title: {
                     upperCase:'Raven',
                     caps: 'RAVEN',
@@ -596,4 +596,7 @@ export const AUDIO_FILES: { [key: string]: any } = {
     "Fox.m4a": require("@/assets/alphabet_audio/animal_audio/X_Fox.m4a"),
     "Yak.m4a": require("@/assets/alphabet_audio/animal_audio/Yak.m4a"),
     "Zebra.m4a": require("@/assets/alphabet_audio/animal_audio/Zebra.m4a"),
+
+    "Big.m4a": require("@/assets/alphabet_audio/Big.m4a"),
+    "Little.m4a": require("@/assets/alphabet_audio/Little.m4a"),
 };

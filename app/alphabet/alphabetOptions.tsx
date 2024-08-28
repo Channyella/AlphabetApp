@@ -7,7 +7,6 @@ import { Audio } from 'expo-av';
 import { ALPHABET_DATA, AlphabetType, AUDIO_FILES } from '@/constants/AlphabetData';
 import { alphabetImageArray } from '@/constants/models/alphabet-images';
 import { Link, useRouter } from 'expo-router';
-import CustomButton from '@/components/CustomButton';
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
