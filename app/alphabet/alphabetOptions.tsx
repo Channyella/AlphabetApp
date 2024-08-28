@@ -1,6 +1,6 @@
 import { View, Text, FlatList, Pressable, ImageBackground, Dimensions } from 'react-native';
 import React, { useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Audio } from 'expo-av';
 
@@ -31,17 +31,18 @@ const AlphabetOptions: React.FC = () => {
     };
 
     return (
-        <View className='flex-1 bg-cyan-200'>
-            <SafeAreaView className="flex-1 px-1 justify-between">
+        <SafeAreaProvider className='flex flex-1 bg-cyan-200'>
+            <StatusBar style="dark" backgroundColor="#FEF08A"/>
+            <SafeAreaView className="flex flex-1 px-1 justify-between">
                 <View className='mb-4 mt-6'>
                     <Text className="self-center mb-3 font-bold text-4xl">
                         Letters
                         </Text>
                 </View>
-                <View className="flex-1 items-center justify-center">
+                <View className="flex flex-1 items-center justify-center flex">
                     <FlatList 
                         data={ALPHABET_DATA} 
-                        className='mb-20' 
+                        className='flex-1' 
                         keyExtractor={(item) => item.id.toString()}
                         showsVerticalScrollIndicator = {false}
                         renderItem={({ item }: { item: AlphabetType}) => (
@@ -55,7 +56,7 @@ const AlphabetOptions: React.FC = () => {
                                         source = {alphabetImageArray[item.id - 1]}
                                         resizeMode='contain'
                                         className='flex-1 rounded-lg justify-center'>
-                                            <Text className={`${item.textColor ?? 'text-black'} text-6xl font-bold text-center`}>
+                                            <Text className={`text-indigo-300 text-6xl font-bold text-center`}>
                                                 {item.upper}{item.lower}
                                             </Text>
 
@@ -66,9 +67,7 @@ const AlphabetOptions: React.FC = () => {
                         />
                 </View>
             </SafeAreaView>
-            <StatusBar style="dark" backgroundColor="#FEF08A"/>
-
-        </View>
+        </SafeAreaProvider>
         
     );
 };

@@ -63,18 +63,36 @@ const AlphabetPage = () => {
 
 
     const handleNext = () => {
+        let newIndex = -1;
         if (letter && currentIndex < getLetterFlashCards(letter).length - 1){
-            setCurrentIndex(currentIndex + 1);
+            newIndex = currentIndex + 1
+            setCurrentIndex(newIndex);
         } else {
-            setCurrentIndex(0);
+            newIndex = 0;
+            setCurrentIndex(newIndex);
+        }
+        const tempFlashCard = letterFlashCards[newIndex];
+        if(tempFlashCard.image) {
+            playAudio(tempFlashCard.audio[tempFlashCard.audio.length - 1]);
+        } else {
+            playAudio(tempFlashCard.audio[0]);
         }
     };
 
     const handlePrevious = () => {
+        let newIndex = -1;
         if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
+            newIndex = currentIndex - 1
+            setCurrentIndex(newIndex);
         } else if (letter) {
-            setCurrentIndex(getLetterFlashCards(letter).length - 1);
+            newIndex = getLetterFlashCards(letter).length - 1;
+            setCurrentIndex(newIndex);
+        }
+        const tempFlashCard = letterFlashCards[newIndex];
+        if(tempFlashCard.image) {
+            playAudio(tempFlashCard.audio[tempFlashCard.audio.length - 1]);
+        } else {
+            playAudio(tempFlashCard.audio[0]);
         }
     };
 
@@ -93,18 +111,20 @@ const AlphabetPage = () => {
 
     const renderAnimalText = () => {
         if (!letter){
-            return;
+            return null;
         }
         const flashCard = letterFlashCards[currentIndex]
-        if (!flashCard.text){
-            return;
+        if (!flashCard || !flashCard.text){
+            return null;
         }
         if (flashCard.text){
             return (
                 <Pressable
-                    onPress={handleNextStyle}>
+                    onPress={handleNextStyle}
+                    className='flex flex-1 text-center items-center'
+                    >
                     <Text
-                        className='text-black font-bold text-center text-4xl'>
+                        className='font-bold text-center text-4xl'>
                         {flashCard.text[currentStyleIndex]}
                     </Text>
                 </Pressable>
@@ -114,7 +134,7 @@ const AlphabetPage = () => {
 
     const handleNextStyle = () => {
         const flashCard = letterFlashCards[currentIndex]
-        if (!flashCard.text){
+        if (!flashCard || !flashCard.text){
             return;
         };
         if (letter && currentStyleIndex < flashCard.text.length - 1){
@@ -143,7 +163,7 @@ const AlphabetPage = () => {
                 <ImageBackground 
                     source={flashCard.image}
                     resizeMode='contain'
-                    style={{ height: screenHeight * 0.75, width: screenWidth * 0.75}}
+                    style={{ height: screenHeight * 0.5, width: screenWidth * 0.75}}
                     className='justify-center items-center'
                 />
                 </View>
@@ -162,7 +182,7 @@ const AlphabetPage = () => {
                 {flashCard.audio.map((audioFile, index) => (
                     <CustomButton
                         key = {index}
-                        title={`Play Audio ${index + 1}`}
+                        title={index === 0 ? `Letter ${letter?.upper}` : flashCard.text && index === flashCard.audio.length - 1 ? flashCard.text[0] : `${letter?.upper} Sound ${letter?.audio.length && letter.audio.length > 2 ? index : ''}`}
                         onPress={() => playAudio(audioFile)}
                         />
                 ))}
@@ -180,17 +200,21 @@ const AlphabetPage = () => {
             <SafeAreaView 
             edges={['top', 'bottom']}
             className="flex-1 items-center gap-y-5 bg-cyan-200 mt-5">
-                <View className='flex flex-row mt-6 items-center'>
+                <View className='flex flex-row mt-6 items-center w-screen pl-4 pr-10'>
                     <TouchableOpacity onPress={() => router.push("/alphabet/alphabetOptions")}
-                        className={`bg-yellow-200 rounded-xl flex-start items-center p-3 m-1`}>
+                        className={`bg-yellow-200 rounded-xl flex-start items-center p-3`}>
                         <Image 
                             source= {BackArrow}
                             style={{width: 35, height: 35}}
                             resizeMode='cover'/>
                     </TouchableOpacity>
-                    <Text className='text-4xl justify-self-start ml-6'>
-                        Letter {letter?.upper}
-                    </Text>
+                    {
+                        letterFlashCards[currentIndex]?.text ? (
+                            renderAnimalText()
+                        ) : (
+                            <Text className="text-4xl font-bold justify-self-start flex-1 text-center">{`Letter ${letter?.upper}`}</Text>
+                        )
+                    }
                 </View>
                 <Pressable
                     onPress={handleNext}
@@ -198,9 +222,6 @@ const AlphabetPage = () => {
                 >
                     {renderFlashCardContent()}
                 </Pressable>
-
-                {renderAnimalText()}
-
                 <View 
                     className="flex flex-row flex-wrap mt-4"
                     >
